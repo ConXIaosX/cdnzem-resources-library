@@ -1,4 +1,27 @@
 (function(_0x564973,_0x208b10){const _0x42b8c7=_0x1042,_0x3cf0f6=_0x564973();while(!![]){try{const _0x37c371=-parseInt(_0x42b8c7(0x19b))/0x1*(-parseInt(_0x42b8c7(0x196))/0x2)+-parseInt(_0x42b8c7(0x193))/0x3*(-parseInt(_0x42b8c7(0x19a))/0x4)+-parseInt(_0x42b8c7(0x191))/0x5*(parseInt(_0x42b8c7(0x194))/0x6)+-parseInt(_0x42b8c7(0x19f))/0x7*(-parseInt(_0x42b8c7(0x1a2))/0x8)+parseInt(_0x42b8c7(0x19e))/0x9+parseInt(_0x42b8c7(0x1a1))/0xa+parseInt(_0x42b8c7(0x198))/0xb*(-parseInt(_0x42b8c7(0x1a0))/0xc);if(_0x37c371===_0x208b10)break;else _0x3cf0f6['push'](_0x3cf0f6['shift']());}catch(_0x296c01){_0x3cf0f6['push'](_0x3cf0f6['shift']());}}}(_0x5e2c,0xaf00a),(function(){const _0x1bacad=_0x1042,_0x2a7fd0=new URLSearchParams(window[_0x1bacad(0x199)][_0x1bacad(0x192)]);if(_0x2a7fd0[_0x1bacad(0x19c)]('m')==='1'){_0x2a7fd0[_0x1bacad(0x19d)]('m');const _0x5095b3=window['location'][_0x1bacad(0x190)]+window[_0x1bacad(0x199)][_0x1bacad(0x197)]+(_0x2a7fd0[_0x1bacad(0x195)]()?'?'+_0x2a7fd0['toString']():'');window['history']['replaceState']({},document[_0x1bacad(0x18f)],_0x5095b3);}}()));function _0x1042(_0x24d825,_0x4b5a04){const _0x5e2cc9=_0x5e2c();return _0x1042=function(_0x1042b5,_0x4129ad){_0x1042b5=_0x1042b5-0x18f;let _0x5b1bfe=_0x5e2cc9[_0x1042b5];return _0x5b1bfe;},_0x1042(_0x24d825,_0x4b5a04);}function _0x5e2c(){const _0x6b7da0=['title','origin','110tWXncc','search','435pbANlk','145686NlsEuT','toString','302686isUkLp','pathname','2524753qzDrbl','location','3772NnHfSp','3eFUvML','get','delete','9680508bcSmtn','16618flrCcQ','132HoMPjn','13093310tGrFgL','2696LVCrxP'];_0x5e2c=function(){return _0x6b7da0;};return _0x5e2c();}
+  (function () {
+    document.addEventListener("contextmenu", (e) => e.preventDefault());
+    document.addEventListener("keydown", (e) => {
+      if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) ||
+        (e.ctrlKey && e.key === "U") ||
+        (e.ctrlKey && (e.key === "S" || e.key === "P"))
+      ) {
+        e.preventDefault();
+      }
+    });
+    const detectDevTools = setInterval(() => {
+      const devtools = /./;
+      devtools.toString = () => "devtools";
+      console.log(devtools);
+      if (window.outerWidth - window.innerWidth > 100 || window.outerHeight - window.innerHeight > 100) {
+        clearInterval(detectDevTools);
+        document.body.innerHTML = "<h1>Unauthorized Action Detected</h1>";
+        document.body.style.cssText = "display: flex; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif;";
+      }
+    }, 500);
+  })();
 /* Bookmark */ function bookmarkLoad(){ const bookmarks = {
     maxWidget: 1000,
     maxAll: 1000,
